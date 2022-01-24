@@ -1,0 +1,11 @@
+.navbar {
+  @include boxShadow(0);
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @include media-up(sm) {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,13 @@
+// Numeros del 0 a 2
+@mixin boxShadow($deep: 0) {
+  @if $deep == 1 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  } @else if $deep == 2 {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  } @else if $deep == 0 {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  } @else {
+    @error "Error: Ingresa un número del 0 al 2";
+  }
+}

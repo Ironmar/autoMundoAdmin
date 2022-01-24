@@ -1,0 +1,132 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Now 10px = 1rem! */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px; /* px fallback */
+  font-size: 1.6rem; /* default font-size for document */
+  line-height: 1.5; /* a nice line-height */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+
+  @include media-down(sm) {
+    font-size: 12px;
+    font-size: $fontsize-small;
+  }
+
+  @include media-between(sm, md) {
+    font-size: 14px;
+    font-size: $fontsize-medium;
+  }
+}
+/* for everything else, rem = px/10 */
+footer {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Remove Margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Reset List */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove decoration links*/
+a {
+  text-decoration: none;
+}
+
+/*Remove outline inputs elements*/
+input,
+textarea {
+  outline: none;
+}
+/*Remove style li*/
+li {
+  list-style: none;
+}
+
+/*Avoid text overflows*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*Create a root stacking context*/
+#root,
+#__next {
+  isolation: isolate;
+}

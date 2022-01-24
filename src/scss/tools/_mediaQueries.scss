@@ -1,0 +1,16 @@
+@mixin media-up($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint )) {
+    @content;
+  }
+}
+@mixin media-down($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints-down, $breakpoint )) {
+    @content;
+  }
+}
+
+@mixin media-between($min, $max) {
+  @media only screen and (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints-down, $max )) {
+    @content;
+  }
+}

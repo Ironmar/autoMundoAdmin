@@ -1,0 +1,25 @@
+/*Settings*/
+@import "./settings/colors";
+@import "./settings/fontsSize";
+@import "./settings/breakpoints";
+@import "./settings/radio";
+@import "./settings/button";
+
+/*Tools*/
+@import "./tools/mediaQueries";
+@import "./tools/boxShadow";
+@import "./tools/textShadow";
+
+/*Generics*/
+@import "./generic/normalize";
+
+/* Elements */
+@import "./element/fonts";
+
+/* Components */
+@import "./components/button";
+@import "./components/inputs";
+@import "./components/modal";
+@import "./components//navBar";
+
+@import "../autoMundo";

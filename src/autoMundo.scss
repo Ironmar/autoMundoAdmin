@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.logo {
+  width: 400px;
+  height: 250px;
+}
+
+form {
+  width: 400px;
+  .btn__width {
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+}
+.form_group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    width: 150px;
+  }
+  input {
+    flex: 1;
+    margin: 1rem 0;
+  }
+}
