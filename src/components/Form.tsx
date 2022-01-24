@@ -37,6 +37,8 @@ const Form:React.FC = () => {
     axios.post("https://auto-mundo.herokuapp.com/api/products",product, {headers:{'Access-Control-Allow-Origin':'*'}}).then(res => {
       axios.put(`https://auto-mundo.herokuapp.com/api/products/${res.data['product']._id}`,formData ).then(res=> console.log(res))
     }).catch(err=>console.log(err))
+      setProduct(intialForm)
+      setFile(undefined)
   };
   
   return(
